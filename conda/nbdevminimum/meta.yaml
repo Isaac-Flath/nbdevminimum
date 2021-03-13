@@ -1,0 +1,33 @@
+package:
+  name: nbdevminimum
+  version: 0.0.2
+source:
+  sha256: e15410e641aff35e7dadb90098227a352c5184c7a731d1b12bc40d102c55324c
+  url: https://files.pythonhosted.org/packages/f2/67/ee74a9677de34fb72f66d6fcb88a2e106bb496a7619e424778259286edb3/nbdevminimum-0.0.2.tar.gz
+about:
+  dev_url: https://Isaac-Flath.github.io
+  doc_url: https://Isaac-Flath.github.io
+  home: https://Isaac-Flath.github.io
+  license: Apache Software
+  license_family: APACHE
+  summary: Minimal export of notebooks nbdev style for one-off projects that don't
+    need to be a full library
+build:
+  noarch: python
+  number: '0'
+  script: '{{ PYTHON }} -m pip install . -vv'
+extra:
+  recipe-maintainers:
+  - Isaac-Flath
+requirements:
+  host:
+  - pip
+  - python
+  - packaging
+  run:
+  - pip
+  - python
+  - packaging
+test:
+  imports:
+  - nbdevminimum
