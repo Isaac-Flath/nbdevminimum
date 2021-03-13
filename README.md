@@ -2,6 +2,10 @@
 > Notebook -> module conversion with #export flags and nothing else
 
 
+```python
+from nbdev_minimum.core import *
+```
+
 **Purpose:**  The purpose and main use of this module is for adhoc projects where a full blown nbdev project is not necessary 
 
 **Example Scenario** 
@@ -25,12 +29,13 @@ In python run the `simple_export_all_nb` function.  This will:
 {% include warning.html content='Any .py files in your lib_path will be removed and replaced.  Do not set lib_path to a folder where you are storing other .py files.  I recommend lib_path being it&#8217;s own folder only for these auto-generated modules' %}
 
 
-<h4 id="simple_export_all_nb" class="doc_header"><code>simple_export_all_nb</code><a href="https://github.com/Isaac-Flath/nbdev_minimum/tree/{branch}/nbdev_minimum/core.py#L38" class="source_link" style="float:right">[source]</a></h4>
+<h4 id="simple_export_all_nb" class="doc_header"><code>simple_export_all_nb</code><a href="https://github.com/Isaac-Flath/nbdev_minimum/tree/{branch}/nbdev_minimum/core.py#L50" class="source_link" style="float:right">[source]</a></h4>
 
-> <code>simple_export_all_nb</code>(**`dir_path`**=*`Path('.')`*, **`lib_path`**=*`Path('src')`*)
+> <code>simple_export_all_nb</code>(**`nbs_path`**=*`Path('.')`*, **`lib_path`**=*`Path('src')`*)
 
 clear_all_modules in lib_path
-for each notebook in dir_path get_module_text and write_module_text to lib_path
+for each notebook in nbs_path get_module_text and write_module_text to lib_path
+All .py files in lib_path will be removed and replaced
 
 
 ### Single Notebook Conversion
@@ -42,13 +47,11 @@ In python run the `simple_export_one_nb` function.  This will:
 + The .py module will be named the same as the notebook.  There is no option to specify a seperate .py file name from your notebook name
 
 
-    ---------------------------------------------------------------------------
+<h4 id="simple_export_one_nb" class="doc_header"><code>simple_export_one_nb</code><a href="https://github.com/Isaac-Flath/nbdev_minimum/tree/{branch}/nbdev_minimum/core.py#L40" class="source_link" style="float:right">[source]</a></h4>
 
-    NameError                                 Traceback (most recent call last)
+> <code>simple_export_one_nb</code>(**`nb_path`**, **`lib_path`**=*`Path('src')`*)
 
-    <ipython-input-19-79bf977f9f06> in <module>
-    ----> 1 show_doc(simple_export_one_nb)
-    
-
-    NameError: name 'simple_export_one_nb' is not defined
+clear_all_modules in lib_path
+for each notebook in nbs_path get_module_text and write_module_text to lib_path
+All .py files in lib_path will be removed and replaced
 
