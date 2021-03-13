@@ -1,13 +1,13 @@
 ---
 
-title: Project name here
+title: nbdev_minimum
 
 
 keywords: fastai
 sidebar: home_sidebar
 
-summary: "Summary description here."
-description: "Summary description here."
+summary: "Notebook -> module conversion with #export flags and nothing else"
+description: "Notebook -> module conversion with #export flags and nothing else"
 nb_path: "index.ipynb"
 ---
 <!--
@@ -31,7 +31,10 @@ nb_path: "index.ipynb"
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>This file will become your README and also the index of your documentation.</p>
+<p><strong>Purpose:</strong>  The purpose and main use of this module is for adhoc projects where a full blown nbdev project is not necessary</p>
+<p><strong>Example Scenario</strong></p>
+<p>Imagine you are working on a kaggle competition. You may not want the full nbdev.  For example, you don't need separate documentation from your notebooks and you're never going to release it to pip or conda.  This module simplifies the process so you just run one command and it creates .py files from your notebooks.  Maybe you are doing an ensemble and to export the dataloaders from a notebook so you can import them into seperate notebooks for your seperate models, or maybe you have a seperate use case.</p>
+<p>That's what this module does.  it's just the #export flags from nbdev and exporting to a module folder with no setup (ie settings.ini, __nbdev.py, etc.) for fast minimal use</p>
 
 </div>
 </div>
@@ -44,7 +47,7 @@ nb_path: "index.ipynb"
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><code>pip install your_project_name</code></p>
+<p><code>pip install nbdev_minimum</code></p>
 
 </div>
 </div>
@@ -57,44 +60,39 @@ nb_path: "index.ipynb"
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Fill me in please! Don't forget code examples:</p>
-
+<h3 id="Full-Directory-Conversion">Full Directory Conversion<a class="anchor-link" href="#Full-Directory-Conversion"> </a></h3>
 </div>
 </div>
 </div>
-    {% raw %}
-    
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="mi">1</span><span class="o">+</span><span class="mi">1</span>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>In python run the <a href="/nbdev_minimum/core.html#simple_export_all_nb"><code>simple_export_all_nb</code></a> function.  This will:</p>
+<ul>
+<li>Look through all your notebooks in the directory (nbs_path) for any code cells starting with <code>#export</code> or <code># export</code></li>
+<li>If any export code cells exist, it will take all the code and put it in a .py file located in <code>lib_path</code></li>
+<li>The .py module will be named the same as the notebook.  There is no option to specify a seperate .py file name from your notebook name</li>
+</ul>
+<p><strong>Any .py files in your lib_path will be removed and replaced.  Do not set lib_path to a folder where you are storing other .py files.  I recommend lib_path being it's own folder only for these auto-generated modules</strong></p>
+<div class="highlight"><pre><span></span><span class="n">simple_export_all_nb</span><span class="p">(</span><span class="n">nbs_path</span><span class="o">=</span><span class="n">Path</span><span class="p">(</span><span class="s1">&#39;.&#39;</span><span class="p">),</span> <span class="n">lib_path</span><span class="o">=</span><span class="n">Path</span><span class="p">(</span><span class="s1">&#39;test_example&#39;</span><span class="p">))</span>
 </pre></div>
 
-    </div>
 </div>
 </div>
-
-<div class="output_wrapper">
-<div class="output">
-
-<div class="output_area">
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>2</pre>
 </div>
-
-</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Single-Notebook-Conversion">Single Notebook Conversion<a class="anchor-link" href="#Single-Notebook-Conversion"> </a></h3><p>In python run the <a href="/nbdev_minimum/core.html#simple_export_one_nb"><code>simple_export_one_nb</code></a> function.  This will:</p>
+<ul>
+<li>Look through the specified notebook (nb_path) for any code cells starting with <code>#export</code> or <code># export</code></li>
+<li>If any export code cells exist, it will take all the code and put it in a .py file located in <code>lib_path</code></li>
+<li>The .py module will be named the same as the notebook.  There is no option to specify a seperate .py file name from your notebook name</li>
+</ul>
+<div class="highlight"><pre><span></span><span class="n">simple_export_one_nb</span><span class="p">(</span><span class="n">nb_path</span><span class="o">=</span><span class="n">Path</span><span class="p">(</span><span class="s1">&#39;./00_core.ipynb&#39;</span><span class="p">),</span> <span class="n">lib_path</span><span class="o">=</span><span class="n">Path</span><span class="p">(</span><span class="s1">&#39;test_example&#39;</span><span class="p">))</span>
+</pre></div>
 
 </div>
 </div>
-
 </div>
-    {% endraw %}
-
 </div>
  
 
