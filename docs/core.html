@@ -184,9 +184,9 @@ All .py files in lib_path will be removed and replaced</p>
 
 
 <div class="output_markdown rendered_html output_subarea ">
-<h4 id="simple_export_all_nb" class="doc_header"><code>simple_export_all_nb</code><a href="https://github.com/Isaac-Flath/nbdevminimum/tree/{branch}/nbdevminimum/core.py#L50" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>simple_export_all_nb</code>(<strong><code>nbs_path</code></strong>=<em><code>Path('.')</code></em>, <strong><code>lib_path</code></strong>=<em><code>Path('src')</code></em>)</p>
+<h4 id="simple_export_all_nb" class="doc_header"><code>simple_export_all_nb</code><a href="https://github.com/Isaac-Flath/nbdevminimum/tree/{branch}/nbdevminimum/core.py#L50" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>simple_export_all_nb</code>(<strong><code>nbs_path</code></strong>=<em><code>Path('.')</code></em>, <strong><code>lib_path</code></strong>=<em><code>Path('src')</code></em>, <strong><code>clear</code></strong>=<em><code>False</code></em>)</p>
 </blockquote>
-<p>clear_all_modules in lib_path
+<p>clear_all_modules in lib_path if clear=True
 for each notebook in nbs_path get_module_text and write_module_text to lib_path
 All .py files in lib_path will be removed and replaced</p>
 
@@ -220,11 +220,9 @@ All .py files in lib_path will be removed and replaced</p>
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>========= Modules Cleared ==========
-Converted test_example/00_core.py
-Converted test_example/train.py
+<pre>Converted test_example/core.py
 Nothing to Convert test_example/index.ipynb
-Converted test_example/01_convert.py
+Converted test_example/convert.py
 </pre>
 </div>
 </div>
@@ -255,7 +253,7 @@ Converted test_example/01_convert.py
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Converted test_example/00_core.py
+<pre>Converted test_example/core.py
 </pre>
 </div>
 </div>
