@@ -1,9 +1,9 @@
 package:
   name: nbdevminimum
-  version: 0.0.2
+  version: 0.0.9
 source:
-  sha256: e15410e641aff35e7dadb90098227a352c5184c7a731d1b12bc40d102c55324c
-  url: https://files.pythonhosted.org/packages/f2/67/ee74a9677de34fb72f66d6fcb88a2e106bb496a7619e424778259286edb3/nbdevminimum-0.0.2.tar.gz
+  sha256: 6b3ab37269a6ab6eab642efb58d16111ad149d0ac989becc75c02fc08c7d40d4
+  url: https://files.pythonhosted.org/packages/08/74/6eb7fb6adb8e63ffc241fe47c802424fa9a00a291cd3e915094c8068ba1f/nbdevminimum-0.0.9.tar.gz
 about:
   dev_url: https://Isaac-Flath.github.io
   doc_url: https://Isaac-Flath.github.io
