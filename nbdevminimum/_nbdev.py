@@ -6,9 +6,14 @@ index = {"get_module_text": "00_core.ipynb",
          "write_module_text": "00_core.ipynb",
          "clear_all_modules": "00_core.ipynb",
          "simple_export_one_nb": "00_core.ipynb",
-         "simple_export_all_nb": "00_core.ipynb"}
+         "simple_export_all_nb": "00_core.ipynb",
+         "get_py_files": "01_convert.ipynb",
+         "get_cells_one_nb": "01_convert.ipynb",
+         "write_code_cell": "01_convert.ipynb",
+         "py_to_nb": "01_convert.ipynb"}
 
-modules = ["core.py"]
+modules = ["core.py",
+           "convert.py"]
 
 doc_url = "https://Isaac-Flath.github.io/nbdevminimum/"
 

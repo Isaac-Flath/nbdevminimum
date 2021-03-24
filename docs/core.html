@@ -6,8 +6,8 @@ title: nbdev_minimum
 keywords: fastai
 sidebar: home_sidebar
 
-summary: "Notebook -> module conversion with #export flags and nothing else"
-description: "Notebook -> module conversion with #export flags and nothing else"
+summary: "Notebook -> module conversion"
+description: "Notebook -> module conversion"
 nb_path: "00_core.ipynb"
 ---
 <!--
@@ -54,7 +54,7 @@ nb_path: "00_core.ipynb"
 
 
 <div class="output_markdown rendered_html output_subarea ">
-<h4 id="get_module_text" class="doc_header"><code>get_module_text</code><a href="https://github.com/Isaac-Flath/nbdev_minimum/tree/{branch}/nbdev_minimum/core.py#L11" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>get_module_text</code>(<strong><code>notebook_path</code></strong>)</p>
+<h4 id="get_module_text" class="doc_header"><code>get_module_text</code><a href="https://github.com/Isaac-Flath/nbdevminimum/tree/{branch}/nbdevminimum/core.py#L11" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>get_module_text</code>(<strong><code>notebook_path</code></strong>)</p>
 </blockquote>
 <p>Read ipynb file and get all code from code cells with #export or # export at the beginning</p>
 
@@ -86,7 +86,7 @@ nb_path: "00_core.ipynb"
 
 
 <div class="output_markdown rendered_html output_subarea ">
-<h4 id="write_module_text" class="doc_header"><code>write_module_text</code><a href="https://github.com/Isaac-Flath/nbdev_minimum/tree/{branch}/nbdev_minimum/core.py#L22" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>write_module_text</code>(<strong><code>module_text</code></strong>, <strong><code>notebook_name</code></strong>, <strong><code>lib_path</code></strong>=<em><code>Path('src')</code></em>)</p>
+<h4 id="write_module_text" class="doc_header"><code>write_module_text</code><a href="https://github.com/Isaac-Flath/nbdevminimum/tree/{branch}/nbdevminimum/core.py#L22" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>write_module_text</code>(<strong><code>module_text</code></strong>, <strong><code>notebook_name</code></strong>, <strong><code>lib_path</code></strong>=<em><code>Path('src')</code></em>)</p>
 </blockquote>
 <p>Write module_text to lib_path/notebook_name as .py file</p>
 
@@ -118,7 +118,7 @@ nb_path: "00_core.ipynb"
 
 
 <div class="output_markdown rendered_html output_subarea ">
-<h4 id="clear_all_modules" class="doc_header"><code>clear_all_modules</code><a href="https://github.com/Isaac-Flath/nbdev_minimum/tree/{branch}/nbdev_minimum/core.py#L32" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>clear_all_modules</code>(<strong><code>lib_path</code></strong>=<em><code>Path('src')</code></em>)</p>
+<h4 id="clear_all_modules" class="doc_header"><code>clear_all_modules</code><a href="https://github.com/Isaac-Flath/nbdevminimum/tree/{branch}/nbdevminimum/core.py#L32" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>clear_all_modules</code>(<strong><code>lib_path</code></strong>=<em><code>Path('src')</code></em>)</p>
 </blockquote>
 <p>Clear all .py files from lib_path to reset your .py exported files</p>
 
@@ -150,7 +150,7 @@ nb_path: "00_core.ipynb"
 
 
 <div class="output_markdown rendered_html output_subarea ">
-<h4 id="simple_export_one_nb" class="doc_header"><code>simple_export_one_nb</code><a href="https://github.com/Isaac-Flath/nbdev_minimum/tree/{branch}/nbdev_minimum/core.py#L40" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>simple_export_one_nb</code>(<strong><code>nb_path</code></strong>, <strong><code>lib_path</code></strong>=<em><code>Path('src')</code></em>)</p>
+<h4 id="simple_export_one_nb" class="doc_header"><code>simple_export_one_nb</code><a href="https://github.com/Isaac-Flath/nbdevminimum/tree/{branch}/nbdevminimum/core.py#L40" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>simple_export_one_nb</code>(<strong><code>nb_path</code></strong>, <strong><code>lib_path</code></strong>=<em><code>Path('src')</code></em>)</p>
 </blockquote>
 <p>clear_all_modules in lib_path
 for each notebook in nbs_path get_module_text and write_module_text to lib_path
@@ -184,7 +184,7 @@ All .py files in lib_path will be removed and replaced</p>
 
 
 <div class="output_markdown rendered_html output_subarea ">
-<h4 id="simple_export_all_nb" class="doc_header"><code>simple_export_all_nb</code><a href="https://github.com/Isaac-Flath/nbdev_minimum/tree/{branch}/nbdev_minimum/core.py#L50" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>simple_export_all_nb</code>(<strong><code>nbs_path</code></strong>=<em><code>Path('.')</code></em>, <strong><code>lib_path</code></strong>=<em><code>Path('src')</code></em>)</p>
+<h4 id="simple_export_all_nb" class="doc_header"><code>simple_export_all_nb</code><a href="https://github.com/Isaac-Flath/nbdevminimum/tree/{branch}/nbdevminimum/core.py#L50" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>simple_export_all_nb</code>(<strong><code>nbs_path</code></strong>=<em><code>Path('.')</code></em>, <strong><code>lib_path</code></strong>=<em><code>Path('src')</code></em>)</p>
 </blockquote>
 <p>clear_all_modules in lib_path
 for each notebook in nbs_path get_module_text and write_module_text to lib_path
@@ -222,7 +222,9 @@ All .py files in lib_path will be removed and replaced</p>
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>========= Modules Cleared ==========
 Converted test_example/00_core.py
+Converted test_example/train.py
 Nothing to Convert test_example/index.ipynb
+Converted test_example/01_convert.py
 </pre>
 </div>
 </div>

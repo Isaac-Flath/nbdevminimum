@@ -16,7 +16,9 @@ That's what this module does.  it's just the #export flags from nbdev and export
 
 ## How to use
 
-### Full Directory Conversion
+### nb -> py
+
+#### Full Directory Conversion
 
 In python run the `simple_export_all_nb` function.  This will:
 + Look through all your notebooks in the directory (nbs_path) for any code cells starting with `#export` or `# export`
@@ -28,7 +30,7 @@ In python run the `simple_export_all_nb` function.  This will:
 ```python
 simple_export_all_nb(nbs_path=Path('.'), lib_path=Path('test_example'))```
 
-### Single Notebook Conversion
+#### Single Notebook Conversion
 
 In python run the `simple_export_one_nb` function.  This will:
 
@@ -39,3 +41,17 @@ In python run the `simple_export_one_nb` function.  This will:
 
 ```python
 simple_export_one_nb(nb_path=Path('./00_core.ipynb'), lib_path=Path('test_example'))```
+
+### py -> nb
+
+#### Full Directory Conversion
+
+In python run the `py_to_nb` function.  This will:
++ Look through all your py files in the `py_path`
++ Find the simple breaking points in each file (ie when new functions or classes are defined
++ Create jupyter notebooks in `nb_path` and put code in seperate cells (with `#export` flag)
+
+**This will overwrite notebooks in the `nb_path` if they have the same name other than extension as a python module**
+
+```python
+py_to_nb(py_path=Path('./src/'),nb_pth=Path('.')```

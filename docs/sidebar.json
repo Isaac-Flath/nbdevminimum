@@ -1,6 +1,7 @@
 {
   "nbdevminimum": {
     "Overview": "/",
-    "nbdev_minimum": "core.html"
+    "nbdev_minimum": "core.html",
+    "Convert": "convert.html"
   }
 }
