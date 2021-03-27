@@ -2,18 +2,18 @@
 
 __all__ = ["index", "modules", "custom_doc_links", "git_url"]
 
-index = {"get_module_text": "00_core.ipynb",
-         "write_module_text": "00_core.ipynb",
-         "clear_all_modules": "00_core.ipynb",
-         "simple_export_one_nb": "00_core.ipynb",
-         "simple_export_all_nb": "00_core.ipynb",
-         "get_py_files": "01_convert.ipynb",
-         "get_cells_one_nb": "01_convert.ipynb",
-         "write_code_cell": "01_convert.ipynb",
-         "py_to_nb": "01_convert.ipynb"}
+index = {"get_module_text": "00_nb2module.ipynb",
+         "write_module_text": "00_nb2module.ipynb",
+         "clear_all_modules": "00_nb2module.ipynb",
+         "simple_export_one_nb": "00_nb2module.ipynb",
+         "simple_export_all_nb": "00_nb2module.ipynb",
+         "get_py_files": "01_module2nb.ipynb",
+         "get_cells_one_nb": "01_module2nb.ipynb",
+         "write_code_cell": "01_module2nb.ipynb",
+         "py_to_nb": "01_module2nb.ipynb"}
 
-modules = ["core.py",
-           "convert.py"]
+modules = ["nb2module.py",
+           "module2nb.py"]
 
 doc_url = "https://Isaac-Flath.github.io/nbdevminimum/"
 

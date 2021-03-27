@@ -11,10 +11,10 @@ entries:
       url: /
     - output: web,pdf
       title: nbdev_minimum
-      url: core.html
+      url: nb2module.html
     - output: web,pdf
       title: Convert
-      url: convert.html
+      url: module2nb.html
     output: web
     title: nbdevminimum
   output: web
